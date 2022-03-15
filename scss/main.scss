@@ -48,8 +48,9 @@ header{
 
 main{
     padding: 4rem;
-    height: 100%;
-
+    //height: 100%;
+    //when making a sticky footer. the element before it (in this case main^) you want to calculate the viewport height minus the height of the footer.
+    min-height: calc(100vh - 60px); //interesting way to make the footer always stay at the bottom through calculations.
     .icons {
         margin-top: 1rem;
 
@@ -68,4 +69,50 @@ main{
             margin-top: 20vh;
         }
     }
+}
+
+.about-info {
+    display: grid;
+    grid-gap:30px;
+    grid-template-areas:
+    'bioimage bio bio'
+    'job1 job2 job3'; //visual representation of grid template
+    grid-template-columns: repeat(3,1fr);
+    
+    // from here below doesnt need to be nested, but since sass has this nesting functionality, why not? Keeps it clean and all together.
+    .bio-image {
+        grid-area: bioimage; //it is bioimage because thats the exact name we put above
+        margin:auto;
+        border-radius: 50%; //makes circle
+        border: $secondary-colour 3px solid;
+    }
+    
+    .bio {
+        grid-area: bio;
+        font-size: 1.5rem;
+    }
+    
+    .job-1 {
+        grid-area: job1
+    }
+    .job-2 {
+        grid-area: job2
+    }
+    .job-3 {
+        grid-area: job3
+    }
+    
+    .job {
+        background: lighten($primary-colour, 5);
+        padding: 0.5rem;
+        border-bottom: $secondary-colour 5px solid;
+    }
+}
+
+#main-footer {
+    text-align: center;
+    padding: 1rem;
+    background: darken($primary-colour, 10);
+    color: set-text-color($primary-colour);
+    height: 60px;
 }
