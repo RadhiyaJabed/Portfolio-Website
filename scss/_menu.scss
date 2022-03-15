@@ -92,4 +92,21 @@
             border: solid 3px $secondary-colour;
         }
     }
+
+    .nav-item {
+        transform: translate3d(600px,0,0); //moves off screen to the right 600px
+        @include easeOut;
+
+        &.show{
+            //Slide in from the right
+            transform: translate3d(0,0,0);
+        }
+    }
+}
+
+//Delay each nav item slide by 0.1s
+@for $i from 1 through 4 {
+    .nav-item:nth-child(#{$i}){
+        transition-delay: $i * 0.1s;
+    }
 }
