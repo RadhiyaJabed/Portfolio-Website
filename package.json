@@ -4,7 +4,7 @@
   "description": "My Portfolio Website",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+    "sass": "node-sass -w scss/ -o docs/css/ --recursive"
   },
   "author": "Radhiya Jabed",
   "license": "MIT",
