@@ -33,7 +33,7 @@ h1, h2, h3 {
 }
 
 a {
-    color: #fff;
+    color: set-text-colour($primary-colour);
     text-decoration: none;
 }
 
