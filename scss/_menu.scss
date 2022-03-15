@@ -47,4 +47,49 @@
     &.show {
         visibility: visible;
     }
+
+    &-branding, 
+    &-nav {
+        display:flex;
+        flex-flow:column wrap; //put in columns
+        align-items: center; //align horizontally
+        justify-content: center; //align vertically
+        float: left;
+        width: 50%;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    &-nav {
+        margin: 0;
+        padding: 0;
+        background: darken($primary-colour, 5);
+        list-style: none;
+        transform: translate3d(0,-100%,0);
+        @include easeOut;
+
+        &.show {
+            //Slide in from the top
+            transform: translate3d(0,0,0);
+        }
+    }
+    
+    //Branding Side
+    &-branding {
+        background: $primary-colour;
+        transform: translate3d(0,100%,0);
+        @include easeOut;
+
+        &.show {
+            //Slide in from the bottom
+            transform: translate3d(0,0,0);
+        }
+        .portrait {
+            width: 250px;
+            height: 250px;
+            background: url(../img/portrait.jpeg);
+            border-radius: 50%;
+            border: solid 3px $secondary-colour;
+        }
+    }
 }
