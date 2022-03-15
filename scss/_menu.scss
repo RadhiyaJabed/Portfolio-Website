@@ -101,6 +101,10 @@
             //Slide in from the right
             transform: translate3d(0,0,0);
         }
+
+        &.current > a { //inside this, its the link we want to colour
+            color: $secondary-colour;
+        }
     }
 
     .nav-link {
@@ -112,7 +116,11 @@
         font-weight: 300;
         color: #fff;
         text-decoration: none;
-        @include easeOut
+        @include easeOut;
+
+        &:hover {
+            color: $secondary-colour;
+        }
     }
 }
 
