@@ -162,7 +162,7 @@ main{
     margin-bottom: 0.3rem;
     &:hover {
         background: $secondary-colour;
-        color: set-text-color(¢$secondary-colour);
+        color: set-text-color($secondary-colour);
     }
 }
 
