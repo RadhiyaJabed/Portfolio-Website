@@ -129,6 +129,7 @@ main{
 }
 
 //Contact Page
+/*--
 .boxes {
     display: flex;
     flex-wrap: wrap; //when it doesnt fit it will go onto next line. cool show of different technologies rather than just using grid. Might change later for consistency.
@@ -153,6 +154,68 @@ main{
         }
     }
 }
+---*/
+#form-container {
+    display: grid;
+    place-items: center;
+    //background: $secondary-colour;
+    //padding: 10px 5px 2px 1px;
+    
+}
+form {
+    display: flex;
+    background-color: lighten($primary-colour,5);
+    padding: 1rem;
+    flex-direction: column;
+    width: 24rem;
+    gap: 1rem;
+    border-radius: 12px;
+}
+
+input,
+select,
+textarea {
+    padding: 1.4rem;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 12px;
+}
+
+textarea {
+    height: 6rem;
+}
+
+select {
+    color: white;
+}
+
+button {
+    //padding: 1rem;
+    cursor: pointer;
+    color: $primary-colour;
+    border: none;
+    border-radius: 12px;
+    &:hover {
+        background: $secondary-colour;
+        color: white;
+    }
+    
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: white;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: white;
+  }
+
+
 
 // Button Styles
 .btn {

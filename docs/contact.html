@@ -48,23 +48,31 @@
     </header>
 
     <main id="contact">
-        <h1 class="lg-heading">
+        <h1 class="lg-heading contact">
             Contact <span class="text-secondary">Me</span>
         </h1>
-        <h2 class="sm-heading">
+        <h2 class="sm-heading contact">
             This is how you can reach me...
         </h2>
-        <div class="boxes">
-            <div>
-                <span class="text-secondary">Email: </span>radsjab780@gmail.com
-            </div>
-            <div>
-                <span class="text-secondary">Phone: </span>07XXX XXXXXX
-            </div>
-            <div>
-                <span class="text-secondary">Address: </span>England, UK
-            </div>
+        <div id="form-container">
+           <form>
+                <input type="text" name="Name" placeholder="Full Name" required>
+                <input type="email" name="Email" placeholder="Email" required>
+                <select name="Continent">
+                    <option value="Prompt" disabled selected>Choose a Continent</option>
+                    <option value="Africa">Africa</option>
+                    <option value="Antarctica">Antarctica</option>
+                    <option value="Asia">Asia</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Europe">Europe</option>
+                    <option value="North America">North America</option>
+                    <option value="South America">South America</option>
+                </select>
+                <textarea name="Message" placeholder="Message" required></textarea>
+                <button type="submit">Send</button>
+            </form> 
         </div>
+        
     </main>
 
     <footer id="main-footer">
