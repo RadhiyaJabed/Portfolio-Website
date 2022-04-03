@@ -71,14 +71,17 @@
     #home h1 {
       margin-top: 10vh;
     }
-
     .lg-heading {
       margin-top:1rem;
-      font-size: 5rem;
+      font-size: 4rem;
     }
   }
 
   .projects {
     grid-template-columns: 1fr;
+  }
+
+  form {
+      width: 50vw;
   }
 }
