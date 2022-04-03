@@ -231,13 +231,11 @@ textarea {
   padding: 1.4rem;
   background: transparent;
   border: 1px solid white;
-  border-radius: 12px; }
+  border-radius: 12px;
+  color: white; }
 
 textarea {
   height: 6rem; }
-
-select {
-  color: white; }
 
 button {
   cursor: pointer;
@@ -337,4 +335,4 @@ button {
   .projects {
     grid-template-columns: 1fr; }
   form {
-    width: 50vw; } }
+    width: 75vw; } }

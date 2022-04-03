@@ -168,6 +168,7 @@ form {
     padding: 1rem;
     flex-direction: column;
     width: 24rem;
+    //width: 75vw;
     gap: 1rem;
     border-radius: 12px;
 }
@@ -179,14 +180,11 @@ textarea {
     background: transparent;
     border: 1px solid white;
     border-radius: 12px;
+    color: white;
 }
 
 textarea {
     height: 6rem;
-}
-
-select {
-    color: white;
 }
 
 button {
@@ -214,7 +212,6 @@ button {
   ::-ms-input-placeholder { /* Microsoft Edge */
     color: white;
   }
-
 
 
 // Button Styles
