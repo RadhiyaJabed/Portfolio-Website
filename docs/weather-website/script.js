@@ -102,13 +102,24 @@ let geocode = {
 }
 
 document.querySelector(".search button").addEventListener("click", function () {
+  if(document.querySelector(".search-bar").value.length == 0){
+    alert("Please select a location.");
+  }else {
     weather.search();
+  }
 });
 
 document.querySelector(".search-bar").addEventListener("keyup", function (event) {
     if(event.key == "Enter") {
+      if(document.querySelector(".search-bar").value.length == 0){
+        alert("Please select a location.");
+      }else {
         weather.search();
+      }
+      
     }
 });
+
+
 
 geocode.getLocation();
